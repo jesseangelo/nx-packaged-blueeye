@@ -123,6 +123,31 @@
           }
         }
       }
+    },
+    "one-lib": {
+      "root": "libs/one-lib",
+      "sourceRoot": "libs/one-lib/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/one-lib/tsconfig.lib.json",
+              "libs/one-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/one-lib/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/one-lib/jest.config.js",
+            "tsConfig": "libs/one-lib/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {

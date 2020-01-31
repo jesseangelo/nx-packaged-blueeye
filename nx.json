@@ -17,6 +17,9 @@
     "blueeye-platform-e2e": {
       "tags": [],
       "implicitDependencies": ["blueeye-platform"]
+    },
+    "one-lib": {
+      "tags": []
     }
   }
 }
