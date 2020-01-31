@@ -20,6 +20,9 @@
     },
     "one-lib": {
       "tags": []
+    },
+    "two-lib": {
+      "tags": []
     }
   }
 }

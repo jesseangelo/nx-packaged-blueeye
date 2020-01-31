@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@jetblue/one-lib": ["libs/one-lib/src/index.ts"]
+      "@jetblue/one-lib": ["libs/one-lib/src/index.ts"],
+      "@jetblue/two-lib": ["libs/two-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -148,6 +148,33 @@
           }
         }
       }
+    },
+    "two-lib": {
+      "projectType": "library",
+      "root": "libs/two-lib",
+      "sourceRoot": "libs/two-lib/src",
+      "prefix": "jetblue",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/two-lib/tsconfig.lib.json",
+              "libs/two-lib/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/two-lib/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/two-lib/jest.config.js",
+            "tsConfig": "libs/two-lib/tsconfig.spec.json",
+            "setupFile": "libs/two-lib/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {
