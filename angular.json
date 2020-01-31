@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "projects": {
+    "blueeye-platform": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/blueeye-platform",
+      "sourceRoot": "apps/blueeye-platform/src",
+      "prefix": "jetblue",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/blueeye-platform",
+            "index": "apps/blueeye-platform/src/index.html",
+            "main": "apps/blueeye-platform/src/main.ts",
+            "polyfills": "apps/blueeye-platform/src/polyfills.ts",
+            "tsConfig": "apps/blueeye-platform/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/blueeye-platform/src/favicon.ico",
+              "apps/blueeye-platform/src/assets"
+            ],
+            "styles": ["apps/blueeye-platform/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/blueeye-platform/src/environments/environment.ts",
+                  "with": "apps/blueeye-platform/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "blueeye-platform:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "blueeye-platform:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "blueeye-platform:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/blueeye-platform/tsconfig.app.json",
+              "apps/blueeye-platform/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/blueeye-platform/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/blueeye-platform/jest.config.js",
+            "tsConfig": "apps/blueeye-platform/tsconfig.spec.json",
+            "setupFile": "apps/blueeye-platform/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "blueeye-platform-e2e": {
+      "root": "apps/blueeye-platform-e2e",
+      "sourceRoot": "apps/blueeye-platform-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/blueeye-platform-e2e/cypress.json",
+            "tsConfig": "apps/blueeye-platform-e2e/tsconfig.e2e.json",
+            "devServerTarget": "blueeye-platform:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "blueeye-platform:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/blueeye-platform-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/blueeye-platform-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "blueeye-platform"
+}

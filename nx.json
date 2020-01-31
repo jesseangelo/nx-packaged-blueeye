@@ -1,0 +1,22 @@
+{
+  "npmScope": "jetblue",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "blueeye-platform": {
+      "tags": []
+    },
+    "blueeye-platform-e2e": {
+      "tags": [],
+      "implicitDependencies": ["blueeye-platform"]
+    }
+  }
+}
