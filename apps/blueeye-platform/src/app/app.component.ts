@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OneLib } from '@jetblue/one-lib';
 
 @Component({
   selector: 'jetblue-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blueeye-platform';
+  business: OneLib = new OneLib();
 }
