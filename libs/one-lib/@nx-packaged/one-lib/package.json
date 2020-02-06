@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/ng-packagr/package.schema.json",
+  "name": "@nx-packaged/one-lib",
+  "version": "1.0.0",
+  "main": "bundles/nx-packaged-one-lib.umd.js",
+  "module": "fesm5/nx-packaged-one-lib.js",
+  "es2015": "fesm2015/nx-packaged-one-lib.js",
+  "esm5": "esm5/nx-packaged-one-lib.js",
+  "esm2015": "esm2015/nx-packaged-one-lib.js",
+  "fesm5": "fesm5/nx-packaged-one-lib.js",
+  "fesm2015": "fesm2015/nx-packaged-one-lib.js",
+  "typings": "nx-packaged-one-lib.d.ts",
+  "metadata": "nx-packaged-one-lib.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

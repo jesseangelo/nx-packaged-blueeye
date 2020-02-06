@@ -1,0 +1,6 @@
+export class OneLib {
+    foo() {
+        return "bar";
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoib25lLWxpYi5qcyIsInNvdXJjZVJvb3QiOiJuZzovL0BueC1wYWNrYWdlZC9vbmUtbGliLyIsInNvdXJjZXMiOlsibGliL29uZS1saWIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxPQUFPLE1BQU07SUFFUixHQUFHO1FBQ1IsT0FBTyxLQUFLLENBQUM7SUFDZixDQUFDO0NBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY2xhc3MgT25lTGliIHtcblxuICAgIHB1YmxpYyBmb28oKTogc3RyaW5nIHtcbiAgICAgIHJldHVybiBcImJhclwiO1xuICAgIH1cbiAgfSJdfQ==

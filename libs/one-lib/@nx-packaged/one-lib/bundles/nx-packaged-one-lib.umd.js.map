@@ -1,0 +1,1 @@
+{"version":3,"file":"nx-packaged-one-lib.umd.js","sources":["ng://@nx-packaged/one-lib/lib/one-lib.ts"],"sourcesContent":["export class OneLib {\n\n    public foo(): string {\n      return \"bar\";\n    }\n  }"],"names":[],"mappings":";;;;;;;QAAA;SAKG;QAHQ,oBAAG,GAAV;YACE,OAAO,KAAK,CAAC;SACd;QACH,aAAC;KAAA;;;;;;;;;;;;"}
